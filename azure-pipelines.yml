@@ -7,7 +7,7 @@ trigger:
 - master
 
 variables:
-  uiSource: '`NewTest'
+  uiSource: '`/NewTest'
   uiBuild: '$(uiSource)/build'
 
 pool:
