@@ -50,8 +50,8 @@ class App extends Component {
 
   return (
     <div className="App">
-      <h1>Hi, I'm a React APP</h1>
-      <p>This is really working!</p>
+      <h1>Hi, I'm a React APP!!!</h1>
+      <p>This is really working!!!</p>
       <button
        style={style}
        onClick={this.switchNameHandler.bind(this, "Leo Lopez")}>Switch Name</button>
