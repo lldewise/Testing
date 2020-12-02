@@ -37,13 +37,13 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      #Cleanup Blob Container
-      - name: Azure CLI Script
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.0.72
-          inlineScript: |
-            az storage blob delete-batch --account-name devatedu --source $web
+      # #Cleanup Blob Container
+      # - name: Azure CLI Script
+      #   uses: azure/CLI@v1
+      #   with:
+      #     azcliversion: 2.0.72
+      #     inlineScript: |
+      #       az storage blob delete-batch --account-name devatedu --source $web
       #Upload Files
       - name: Azure CLI Script
         uses: azure/CLI@v1
