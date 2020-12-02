@@ -44,6 +44,8 @@ jobs:
       # Download previusly shared build
       - name: Get artifact
         uses: actions/download-artifact@v1
+        with:
+            name: react-github-actions-build
 
       #Login to Azure
       - name: Azure Login
@@ -57,7 +59,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob upload-batch --account-name devatedu -d '$web' -s .
+            az storage blob upload-batch --account-name devatedu -d '$web' -s ./react-github-actions-build
 
       # #Purge CND
       # - name: Azure CLI Script
