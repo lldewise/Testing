@@ -1,39 +1,67 @@
-# Node.js with React
-# Build a Node.js project that uses React.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+name: Atedu Frontend CI/CD
 
-trigger:
-- master
+on:
+  push:
+    branches:
+      - atedu-dev
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    brances:
+      - atedu-dev
 
-variables:
-  uiSource: 'NewTest'
-  uiBuild: '$(uiSource)/build'
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    env:
+      CI: false
+    steps:
+      #Checkout Code
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-pool:
-  vmImage: 'ubuntu-latest'
+      #Setup Node
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+      #Install, Build and Test if present
+      - name: npm install, build and test
+        run: |
+          npm install
+          npm run build --if present
+      #   npm run test --if present
+      #Download Build files
 
-- script: |
-    pushd $(uiSource)
-    npm install
-    npm run build
-    popd
-  displayName: 'npm install and build'
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(uiBuild)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+      #Login to Azure
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      #Cleanup Blob Container
+      - name: Azure CLI Script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az storage blob delete-batch --account-name devatedu --source $web
+      #Upload Files
+      - name: Azure CLI Script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az storage blob upload-batch --account-name devatedu -d '$web' -s .
+      #Purge CND
+      - name: Azure CLI Script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az cdn endpoint purge --content-path "/*" --profile-name devatedu --name devatedu --resource-group atedu-dev
+      #Azure Logout
+      - name: Logout
+        run: |
+          az logout
