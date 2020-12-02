@@ -1,93 +1,44 @@
-import { render } from '@testing-library/react';
-import React, { Component } from 'react';
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
-import './App.css';
-import Person from './Person/Person'
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ProgressIndicator, styled } from '@fluentui/react';
 
-class App extends Component {
-  state = {
-    persons: [
-      {name: 'Leo', age: 26},
-      {name: 'Max', age: 27},
-      {name: 'Manu', age: 28}
-    ],
-    otherState: 'some other value',
-    showPersons: false
-  }
+import { AutoSwitchLayout } from './components/layout';
+import { renderRoutes } from './util/route';
+import routeConfig from './routeConfig';
+import i18n from './i18n/i18n'
+import 'office-ui-fabric-react/dist/css/fabric.css';
+import './App.scss';
 
-  switchNameHandler = (newName) => {
-    //console.log('Was Clicked!')
-    // Wrong! this.state.persons[0].name = 'Leo Lopez';
-    this.setState({
-      persons: [
-        {name:  newName, age: 26},
-        {name: 'Max', age: 27},
-        {name: 'Manu', age: 29}
-      ]
-    
-    })
-  }
+function App() {
 
-  nameChangedHandler = (event) => {
-    this.setState({
-      persons: [
-        {name: 'Leo Lopez', age: 26},
-        {name:  event.target.value, age: 27},
-        {name: 'Manu', age: 29}
-      ]
-    
-    })
-  }
-
-  togglePersonsHandler = () => {
-    const doesShow = this.state.showPersons;
-    this.setState({showPersons: !doesShow});
-  }
+  React.useLayoutEffect(() => {
+    document.body.style.backgroundColor = "#fffff";
+    document.body.style.color = "#323130";
+  }, []);
   
-  render() {
-
-    const style = {
-      backgroundColor: findRenderedComponentWithType,
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer'
-    }
-
-    let persons = null;
-
-    if (this.state.showPersons) {
-       persons = (
-
-        <div>
-        <Person
-          name={this.state.persons[0].name} 
-          age={this.state.persons[0].age}/>
-        <Person 
-          name={this.state.persons[1].name} 
-          age={this.state.persons[1].age}
-          click={this.switchNameHandler.bind(this, "Leo Lopez!")} changed={this.nameChangedHandler}>My Hobbies: Basketball</Person>
-        <Person 
-          name={this.state.persons[2].name} 
-          age={this.state.persons[2].age}/>
-       </div>
-
-       )
-    }
+  const updatedRoute = routeConfig;
+  updatedRoute['path'] = "/" + i18n.language + "/";
+  updatedRoute.children.map(item => {
+    return item.path = "/" + i18n.language + item.path;
+  });
+  
 
   return (
-    <div className="App">
-      <h1>Hi, I'm a React APP!!!</h1>
-      <p>This is really working!!!</p>
-      <button
-       style={style}
-       onClick={this.togglePersonsHandler}>Switch Name</button>
-       {persons}
-    </div>
+    <Router>
+      <AutoSwitchLayout>
+        <Suspense fallback={<ProgressIndicator label="Page loading..." />}>
+          <div className="ms-Grid" dir="ltr" style={{overflow:'hidden'}}>
+            {renderRoutes(routeConfig)}
+          </div>
+        </Suspense>
+      </AutoSwitchLayout>
+    </Router>
   );
-  //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?' )) 
-
-  }
 }
 
-export default App;
+
+console.log( process.env.NODE_ENV);
+// Live reload != hot reload! CRA doesn't do hot reload, so we install it here.
+ //let HotApp = process.env.NODE_ENV === 'production' ? App : hot(module)(App);
+
+export default styled(App);

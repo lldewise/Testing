@@ -1,0 +1,76 @@
+$purple-bg: #6c35d4;
+$font-color: #000;
+$white-bg: #fff;
+
+
+ 
+  
+  .fontIcon{
+    font-size: 20px;
+    color: $purple-bg;
+    padding: 6px;
+    background-color: #e6e6ff;
+    margin-right: 3px;
+    margin-top:5px;
+  }
+
+  .divpad10{
+        padding: 10px;
+  }
+
+  .container{
+      background-color: $white-bg;  
+      padding: 15px 20px ;    
+      border-radius: 3px;
+      border: .5px solid rgb(238, 233, 233);
+  }
+
+  .duedate{
+      font-size: 12px;
+      color: rgb(243, 159, 33);
+  }
+
+  .title{
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+
+  .postedby{
+    font-size: 12px;
+    color: rgb(83, 83, 83);
+  }
+
+  .customChart {
+    margin-top: -35px;
+  }
+
+  .customLabel {
+    margin-top: -10px;
+  }
+
+  .gradeDesc{
+    margin-left: 40px;
+    font-weight: bold;
+  }
+
+  .quiznum{
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .customScorePass{
+    font-size: 20px;
+    color: #8ED85F;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.customScoreFail{
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 15px;
+}

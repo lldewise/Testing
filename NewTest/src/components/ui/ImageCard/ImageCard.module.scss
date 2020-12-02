@@ -1,0 +1,22 @@
+$purple-bg: #6c35d4;
+$font-color: #000;
+$white-bg: #fff;
+ 
+ .divpad10{
+        width: 152px;
+        height: 152px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #EDEBE9;
+        border-radius: 3px;
+        opacity: 1;
+        text-align: center;
+        padding: 24px ;   
+
+  }
+  .container {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: $white-bg;  
+     
+  }
+ 

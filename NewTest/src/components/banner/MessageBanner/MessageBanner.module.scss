@@ -1,0 +1,53 @@
+.customFontColor{
+    color:white;
+}
+
+.customBgColor{
+    background: linear-gradient(45deg, #7c4ad9, #5128a1) ;
+    border-radius: 5px;
+}
+
+.customBgImage{
+    background-image: url(../../../assets/images/Mask_Group_5.png);
+    background-size: 100%;
+}
+
+.imgStyle{
+    height: 167px;
+    margin-bottom: -3px;
+}
+
+.iconStyle{
+    color: white;
+    padding-top: 20px;
+    padding-right: 25px;
+    cursor: pointer;
+    float: right;
+}
+
+.gridGetStarted{
+    padding-top: 115px;
+    padding-left: 30px;
+}
+
+.customBtn{
+    background-color: #eca944;
+    width: 115px;
+    float: right;
+    margin-top: 70px;
+    margin-right: 25px;
+}
+
+.showBanner{
+    padding-bottom: 15px;
+    display: block;
+}
+
+.hideBanner{
+    padding-bottom: 15px;
+    display: none;
+}
+
+.customBtnBG {
+    background-color: #eca944 !important; 
+}

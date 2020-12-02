@@ -1,0 +1,131 @@
+.recentScore{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .container{
+    padding: 15px 10px 15px 0px;    
+    border-top: 1px solid #e7e7ee;
+    border-bottom: 1px solid #e7e7ee;
+}
+
+.headerFilter{
+    font-weight: 500;
+   
+    
+  }
+  .cursor{
+    cursor: pointer;
+}
+
+.commandright{
+    text-align: right;
+    font-weight: 500;
+}
+
+.divGrade{
+  background: white;
+  border-bottom: 1px solid #edebe9;
+  height: 50px;
+}
+
+.labelGrade{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 10px; 
+  position: absolute;
+}
+
+.progressPass {
+  display: -ms-flexbox;
+  display: flex;
+  height: .25rem;
+  overflow: hidden;
+  line-height: 0;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+  width: 120px;
+}
+
+.progressBarPass {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #6BB700;
+  transition: width .6s ease;
+}
+
+.progressBarFail {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: red;
+  transition: width .6s ease;
+}
+
+.scorePassLabel{
+  margin: -13px 0 0 130px;
+	display:inline-block;
+  content: attr(value) '%';
+  font-size: 15px;
+  position: absolute;
+  color: #6BB700;
+}
+
+.scoreFailLabel{
+  margin: -13px 0 0 130px;
+	display:inline-block;
+  content: attr(value) '%';
+  font-size: 15px;
+  position: absolute;
+  color: red;
+}
+
+.scoreMargin{
+  margin-top: 8px;
+}
+
+// progress {
+// 	display:inline-block;
+// 	height:5px;
+// 	border-radius: 15px;
+// 	text-align: left;
+// 	position:relative;
+// 	font-family: Arial, Helvetica, sans-serif;
+// 	font-size: 0.8em;
+// }
+// progress::-webkit-progress-bar {
+// 	width:150px;
+// 	background-color: #E6E6E6;
+// 	border-radius: 15px;
+// }
+// progress::-webkit-progress-value {
+// 	display:inline-block;
+// 	float:left;
+// 	margin:0px -10px 0 0;
+// 	background: #6BB700;
+// 	border-radius: 15px;
+// }
+// progress:after {
+// 	margin:-10px 0 0 160px;
+// 	display:inline-block;
+// 	float:left;
+//   content: attr(value) '%';
+//   font-size: 15px;
+// }

@@ -1,0 +1,32 @@
+{
+    "colors": [
+        {
+            "id": "1",
+            "groupId": "classSchedule",      
+            "display": "backgound",
+            "color": "#F3EFFC",
+            "borderColor": "#6C35D4"      
+        },  
+        {
+            "id": "2",
+            "groupId": "private",        
+            "display": "backgound",
+            "color": "#F3F9EB",   
+            "borderColor": "#6BB700"      
+        },
+        {
+            "id": "3",
+            "groupId": "exam",
+            "display": "backgound",
+            "color": "#F9EFEA",   
+            "borderColor": "#C96238"        
+        },  
+        {
+            "id": "4",
+            "groupId": "schoolEvent",        
+            "display": "backgound",
+            "color": "#fff6ed",
+            "borderColor": "#f7a93b"        
+        }
+    ]
+}

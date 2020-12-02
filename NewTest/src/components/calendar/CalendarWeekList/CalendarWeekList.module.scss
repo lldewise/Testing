@@ -1,0 +1,89 @@
+.date{
+    font-size:16px
+}
+
+.locationtimecontainer{
+    background-color: #F8F8F8 ;
+}
+.locationtime{
+    padding: 20px ;
+    font-size: 12px;
+}
+
+.container{
+    background-color:#fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.container:hover{
+    .selectedDate{      
+        height: 62px;
+        width: 5px;
+        background-color: #6c35d4;
+        border: 1px solid #6c35d4;
+        border-radius: 5px;       
+    }
+
+    .locationtimecontainer{
+        background-color:#fff;
+        border: 1px solid #f5f4f4;
+        border-radius: 5px;
+    }
+}
+
+.dateContainer{
+    padding-top: 5px;
+    padding-right: 0px;
+}
+.iconContainer{
+   padding: 23px 0 0 0;
+    
+}
+.fontIcon{
+    font-size: 20px;
+}
+
+.datelabel{
+    font-size: 12px;
+}
+
+.clockIcon{
+    font-size: 12px;
+}
+
+.selectedDate{
+  
+    
+        height: 62px;
+        width: 5px;
+        // background-color: #6c35d4;
+        // border: 1px solid #6c35d4;
+        // border-radius: 5px;
+    
+   
+}
+
+.selectedContainer{
+    padding-left: 14px;
+    padding-right: 5px;
+}
+
+.selectionCalendar{
+    font-size: 12px;
+    padding: 42px 10px 10px 10px;
+    border-bottom: 1px solid #e7e7ee;    
+
+}
+.selectionContainer{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.cursor{
+    cursor: pointer;
+}
+
+.padB5{
+    padding-bottom: 5px;
+}

@@ -1,20 +1,56 @@
 {
-  "name": "react-complete-guide",
+  "name": "fluentui-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@azure/msal-browser": "^2.7.0",
+    "@fluentui/react": "^7.147.1",
+    "@fullcalendar/core": "^5.3.1",
+    "@fullcalendar/daygrid": "^5.3.2",
+    "@fullcalendar/interaction": "^5.3.1",
+    "@fullcalendar/react": "^5.3.1",
+    "@fullcalendar/timegrid": "^5.3.1",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@uifabric/example-data": "^7.1.5",
+    "@uifabric/react-cards": "^0.114.2",
+    "@uifabric/theme-samples": "^7.0.47",
+    "axios": "^0.21.0",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.2.6",
+    "draft-js": "^0.11.7",
+    "i18next": "^19.8.3",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "infinite-react-carousel": "^1.2.11",
+    "jodit-react": "^1.0.66",
+    "json-server": "^0.16.2",
+    "lodash-es": "^4.17.15",
+    "moment": "^2.29.1",
+    "node-sass": "^4.0.0",
+    "react": "^16.14.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "^16.14.0",
+    "react-hook-form": "^5.2.0",
+    "react-hot-loader": "^4.12.21",
+    "react-i18next": "^11.7.3",
+    "react-paginate": "^6.5.0",
+    "react-player": "^2.7.0",
+    "react-quill": "^1.3.5",
+    "react-responsive-carousel": "^3.2.10",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-use": "^13.27.1",
+    "swr": "^0.3.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "upgrade-deps": "npx ncu -u && yarn && yarn upgrade",
+    "analyze": "node scripts/analyze.js",
+    "start": "react-scripts start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mock-server": "json-server --watch ./db.json -p 4100 -d 2000"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +66,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }

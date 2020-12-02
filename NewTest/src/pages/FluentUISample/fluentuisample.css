@@ -1,0 +1,21 @@
+
+
+.fluenttitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.divpadt10{
+    padding-top:10px;
+}
+
+.fluentuicontainer{ 
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f8f8f8;
+
+}

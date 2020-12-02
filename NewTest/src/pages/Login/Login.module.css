@@ -1,0 +1,112 @@
+.LoginContainer{
+        background-color: white;
+        
+        padding-top: 0x;
+        height: 100vh;
+        overflow: scroll;
+
+}
+.pad{
+    padding: 0px 70px;
+    font-size:20px;
+}
+.mtop20{
+    margin-top: 20px;
+}
+
+.mtop30{
+    margin-top: 30px;
+}
+
+
+
+.buttonsize
+{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight:bold;
+    padding: 30px;
+    background-color: #7c4ad9;
+    color: white;
+}
+
+
+
+  .loginbutton {
+    background-color:white; /* Green */
+    border:1px solid #7c4ad9;
+    color:#7c4ad9;
+    padding: 16px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 24px;
+  }
+
+  .loginbuttonnmeid{
+    background-color:white; /* Green */
+    border:1px solid #7c4ad9;
+    color:#7c4ad9;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+        
+    cursor: pointer;
+    border-radius: 24px;
+    vertical-align: middle;
+    padding: 9px 5px;
+
+  }
+
+  .mr10{
+      margin-right: 5px;
+  }
+
+  .loginIcon{
+      color: #7c4ad9;
+      font-size: 18px;
+      vertical-align: middle;
+
+  }
+
+  .LoginContainer ::placeholder{
+      font-size: 20px;      
+ 
+  }
+
+  .LoginContainer::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
+  .imagepad{
+    margin: 45px 0px;
+  }
+
+  .divlogobackbround{
+      height: 100vh;
+      background-image: url("../../assets/logobackground.PNG");
+      background-size: 53.5%;
+      background-repeat: no-repeat;
+      background-position: right;          
+  }
+
+  .logininput{
+      margin-top:130px;
+      
+  }
+
+  .textsize{
+      font-size: 20px;
+  }
+
+  .nemid{
+    width: 92px;
+    height: 25px;
+    margin-top: 5px;
+  }

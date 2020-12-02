@@ -1,0 +1,37 @@
+.imagePad {
+    margin: 0px 10px;
+  }
+  
+
+  .divComment{
+      height: 98px;
+      max-height: 98px;      
+      display: inline-block; 
+      overflow: hidden;;
+      width: 100%;
+
+  }
+  
+  .name{
+      font-weight: bold;
+
+  }
+  .divname{
+      padding-bottom: 5px;
+  }
+
+  .container{
+    
+    background-color: white;
+  }
+
+  .containerPad{
+    padding: 20px 20px 10px 20px;
+  }
+
+.seeMore{
+    color: rgb(50, 50, 212);
+    padding-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}

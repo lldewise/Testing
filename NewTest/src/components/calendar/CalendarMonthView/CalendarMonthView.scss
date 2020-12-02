@@ -1,0 +1,152 @@
+$purple-bg: #6c35d4;
+$gray-bg: #f8f8f8;
+$white-bg: #fff;
+$yellow-bg: #f7a93b;
+$color-deafult: #000;
+
+.calendarMonthView {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  position: relative;
+  top: -10px;
+
+  .monthViewSchedule {
+    font-weight: normal !important;
+    height: auto !important;
+    padding: 5px 2px !important;
+  }
+
+  /* calendar scss */
+
+  .fc-col-header tbody {
+    height: 40px !important;
+  }
+
+  .fc-view-harness.fc-view-harness-active {
+    font-weight: normal !important;
+    height: 87vh !important;
+  }
+
+  .fc-timegrid-slot.fc-timegrid-slot-label.fc-timegrid-slot-minor {
+    border-style: none !important;
+  }
+
+  .fc-timegrid-slot.fc-timegrid-slot-label.fc-scrollgrid-shrink {
+    border-style: none !important;
+  }
+
+  .fc-timegrid-slot-label-cushion.fc-scrollgrid-shrink-cushion {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+  }
+
+  .fc-timegrid-event-harness {
+    cursor: pointer;
+  }
+
+  .fc {
+    margin-top: -10px !important;
+  }
+
+  .fc .fc-daygrid-day-frame,
+  .fc .fc-timegrid-col.fc-day-today {
+    background-color: $gray-bg !important;
+  }
+
+  .fc td,
+  .fc th {
+    border-right: none !important;
+    border-left: none !important;
+  }
+
+  .fc .fc-daygrid-day-frame {
+    border-top: $gray-bg !important;
+  }
+
+  .fc-timegrid-event {
+    border-color: 1px solid #f8f8f8 !important;
+  }
+
+  .fc-event-main {
+    color: #000 !important;
+    border-style: none !important;
+    padding: 2px !important;
+    margin: auto !important;
+  }
+
+  .fc-h-event {
+    border: 0px !important;
+  }
+
+  .fc-scrollgrid-sync-inner {
+    font-weight: normal !important;
+  }
+
+  .fc-direction-ltr .fc-timegrid-col-events {
+    margin: 0px !important;
+  }
+
+  .fc-theme-standard th {
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .fc-daygrid-event {
+    position: unset !important;
+    overflow: hidden;
+  }
+
+  .fc-day-today {
+    border-top: 5px solid $purple-bg !important;
+  }
+
+  .fc-col-header {
+    height: 50px !important;
+  }
+
+  .fc-scrollgrid {
+    border: none !important;
+  }
+
+  // .fc-scrollgrid td:last-of-type {
+  //   border-right: none !important;
+  // }
+
+  .fc .fc-daygrid-day-bottom {
+    font-size: 12px !important;
+    margin: 2px 3px 0px !important;
+    display: flex !important;
+    justify-content: center !important;
+    color: #0078d4 !important;
+  }
+
+  .fc-popover-title {
+    color: $purple-bg !important;
+  }
+
+  // .fc-scroller,
+  // .fc-scrollgrid-section-liquid {
+  //   overflow: hidden !important;
+  // }
+  /* calendar css end */
+}
+
+.calendarDaySched {
+  position: relative;
+
+  .dayTitle {
+    border: 1px solid #ddd;
+    padding: 0 10px 5px 10px;
+    height: 43px;
+    line-height: 50px;
+    position: relative;
+    font-size: 20px;
+    color: $purple-bg;
+  }
+
+  .dayList {
+    background-color: #f8f8f8;
+    height: 81vh !important;
+    overflow: hidden scroll;
+  }
+}

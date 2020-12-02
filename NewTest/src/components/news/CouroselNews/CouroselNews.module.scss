@@ -1,0 +1,57 @@
+.customBackgroundNews {
+    background: white;
+    height: 220px;
+    max-width: 100% !important;
+  }
+
+.customDiv{
+    width: 200px;
+    padding-top: 35px;
+    margin-left: -60px;
+}
+
+.newsTitle {
+  font-weight: bold;
+  padding: 12px;
+}
+
+.imgHeight{
+  max-height: 140px;
+  height: 130px;
+  width: 140px;
+  border-radius: 6px;
+}
+
+.newsTitleFont{
+  color: #6C35D4;
+  font-family: Segoe UI Semibold;
+  font-size: 12px;
+}
+
+.newsIcon{
+  color: #6C35D4;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.newsContent{
+  font-family: Segoe UI Regular;
+  font-size: 15px;
+}
+
+.newsDateFont{
+  color: #6C35D4;
+  font-family: Segoe UI Semibold;
+  font-size: 12px;
+}
+
+.focus{
+  outline: none !important;
+    :focus{
+      outline: none !important;
+    }
+}
+
+.iconPadding {
+  padding-right: 10px;
+}

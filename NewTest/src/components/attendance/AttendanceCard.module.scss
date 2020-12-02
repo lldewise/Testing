@@ -1,0 +1,84 @@
+$paddingLeft: 170px;
+$marginLeft: 20px;
+
+.customMargin {
+  margin-top: 65px;
+  margin-left: $marginLeft !important;
+  padding-left: $paddingLeft;
+  position: absolute;
+  font-weight: bold;
+}
+.customMargin2 {
+  margin-top: 85px;
+  margin-left: $marginLeft !important;
+  padding-left: $paddingLeft;
+  position: absolute;
+}
+.customMarginAttendedPercent{
+  margin-top: 115px;
+  margin-left: $marginLeft !important;
+  padding-left: 190px;
+  position: absolute;
+  font-size: 18px;
+  color: #8ED85F;
+}
+.customMarginAttended{
+  margin-top: 140px;
+  margin-left: $marginLeft !important;
+  padding-left: 190px;
+  position: absolute;
+  color: #8ED85F;
+}
+
+.customMarginAbsencesPercent{
+  margin-top: 115px;
+  margin-left: $marginLeft !important;
+  padding-left: 325px;
+  position: absolute;
+  font-size: 18px;
+}
+.customMarginAbsences{
+  margin-top: 140px;
+  margin-left: $marginLeft !important;
+  padding-left: 325px;
+  position: absolute;
+}
+
+.customBackgroundAttendance {
+  background: white;
+  height: 220px;
+  max-width: 100% !important;
+}
+
+.attendanceTitle {
+  font-weight: bold;
+  padding: 12px;
+}
+
+.customChart {
+  margin-top: 40px;
+  margin-left: -200px;
+}
+
+.iconPadding {
+  padding-right: 10px;
+}
+
+.attendanceContainer {
+  margin-left: 12px !important;
+}
+
+$breakpoint-large: 1200px;
+@media (min-width: $breakpoint-large) {
+  .attendanceContainer {
+    margin-left: 60px !important;
+  }
+
+  .customMargin {
+    margin-left: 40px !important;
+  }
+
+  .customMargin2 {
+    margin-left: 40px !important;
+  }
+}

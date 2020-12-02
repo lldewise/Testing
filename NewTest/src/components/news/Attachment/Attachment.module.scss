@@ -1,0 +1,37 @@
+
+.containerAttachment {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    
+    height: 100%;    
+    overflow-x: auto;
+    white-space:nowrap;  
+    
+
+    
+
+}
+
+.containerAttachment::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+
+// ::-webkit-scrollbar {
+//     width: 0px;  /* Remove scrollbar space */
+//     background: transparent;  /* Optional: just make scrollbar invisible */
+// }
+
+.card {
+
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-edebe9);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EDEBE9;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.cardContainer{
+    display: inline-block;
+}
+

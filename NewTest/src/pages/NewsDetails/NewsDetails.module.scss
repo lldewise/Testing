@@ -1,0 +1,147 @@
+.container {
+  overflow: auto;
+  max-height: 500;
+}
+
+.itemDetails {
+  font-size: 14px;
+}
+
+.chevron {
+  align-self: center;
+  margin-left: 10;
+  color: rgb(161, 159, 157);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.itemIndex {
+  font-size: 12px;
+  color: rgb(161, 159, 157);
+  margin-bottom: 10;
+}
+
+.itemSingle {
+  padding: 8px;
+  font-size: 14px;
+  width: 45px;
+}
+
+.listrightwidth {
+  width: 190px;
+}
+
+.itemName {
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemImage {
+  flex-shrink: 0;
+}
+
+.itemCell {
+  outline: transparent;
+  position: relative;
+  min-height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(237, 235, 233);
+  display: flex;
+}
+
+.itemhover {
+  background: inherit;
+  :hover {
+    background: rgb(237, 235, 233);
+  }
+}
+
+.odd {
+  background-color: #f8f8f8;
+}
+
+.even {
+  background-color: #ffffff;
+}
+
+.headerTitle {
+  padding-left: 20px;
+}
+
+.newsTitle {
+  
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: -25px;
+}
+
+.schoolName {
+  
+  font-size: 24px;
+  color: #605e5c;
+}
+
+.imgSize {
+  max-width: 100%;
+  padding-top: 10px;
+}
+
+.calendarList {
+  max-width: 70%;
+}
+
+.bgColor {
+  background-color: white;
+}
+
+.dateFontColor {
+  color: #0078d4;
+}
+
+.relatedPostlbl {
+  font-size: 14px;
+  font-weight: bold;
+}
+.relatedPostContainer {
+  padding-left: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.leftArrow {
+  font-size: 35px;
+  color: #6c35d4;
+  float: left;
+}
+
+.rightArrow {
+  font-size: 35px;
+  color: #6c35d4;
+  float: right;
+}
+
+.prevLabel {
+  font-size: 16px;
+  margin-left: -10px;
+  float: left;
+  margin-top: 3px;
+}
+
+.nextLabel {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.arrowDiv {
+  margin-bottom: -40px;
+  margin-top: 3px;
+}
+
+.rightArrowDiv {
+  display: flex;
+  justify-content: flex-end;
+}

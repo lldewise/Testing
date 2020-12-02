@@ -1,0 +1,42 @@
+$purple-bg: #6c35d4;
+$font-color: #000;    
+
+.cursor{
+    cursor: pointer;
+}
+
+.headerFilter{
+  padding:25px 10px 10px  10px; 
+  font-weight: 500;
+}
+
+.aLink {
+    position: relative;
+    display: block;
+    
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;        
+    color: $font-color;
+    text-decoration: none;    
+    padding-bottom: 12px;
+  }
+  
+  .aLinkactive {    
+    position: relative;
+    display: block;
+    font-weight: bold;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;        
+    color: $font-color;
+    text-decoration: none;    
+    padding-bottom: 10px;
+    border-bottom: $purple-bg  3px solid;
+  }
+
+  .dueSoon{
+    font-size: 16px;
+    font-weight: bold;
+  }
+

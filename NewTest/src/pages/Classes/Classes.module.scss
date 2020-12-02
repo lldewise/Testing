@@ -1,0 +1,90 @@
+$purple-bg: #6c35d4;
+$font-color: #000;
+
+
+
+.BreadcrumbContainer{
+    margin:0px !important;
+
+    div{
+      color: $purple-bg !important;
+      font-size: 14px;
+    }
+}
+
+.borderbot{
+    border-bottom: $purple-bg  3px solid;
+}
+
+.padUS{
+    padding: 30px 9px 10px 0px;
+  }    
+  .iconColor{
+    color:$purple-bg;
+    font-size: 20px;
+  }
+
+  .padUS{
+    padding: 14px 10px 0px 0px;
+  }
+
+  .uploadText{
+    vertical-align: super;
+    color:$purple-bg;
+    font-size: 14px;
+    
+  }
+
+  .aLink {
+    position: relative;
+    display: block;
+    
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;        
+    color: $font-color;
+    text-decoration: none;    
+    padding-bottom: 12px;
+  }
+  
+  .aLinkactive {    
+    position: relative;
+    display: block;
+    font-weight: bold;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;        
+    color: $font-color;
+    text-decoration: none;    
+    padding-bottom: 10px;
+    border-bottom: $purple-bg  3px solid;
+  }
+
+
+
+  .container{
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+  }
+
+
+
+  .cursor{
+    cursor: pointer;
+}
+
+.titleSubject{
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.borderbottab{
+  border-bottom: 1px $purple-bg ;
+}
+
+.righLayout{
+  margin-top: 10px;
+}
