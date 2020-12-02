@@ -42,10 +42,10 @@ jobs:
     needs: build
     steps:
       # Download previusly shared build
-      name: Get artifact
-      uses: actions/download-artifact@v1
-      with:
-        name: react-github-actions-build
+      - name: Get artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: react-github-actions-build
 
       #Login to Azure
       - name: Azure Login
