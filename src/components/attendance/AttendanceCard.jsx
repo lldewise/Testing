@@ -54,7 +54,7 @@ export const AttendanceCard = () => {
       aria-label="Basic horizontal card"
       horizontal
       tokens={cardTokens}>
-      <label className={classes.attendanceTitle}>Attendance</label>
+      <label className={classes.attendanceTitle}>Attendance TEST</label>
       <div className={classes.attendanceContainer}>
       <FontIcon iconName="Emoji" className={classNames.greenYellow} />
       <Card.Item>
