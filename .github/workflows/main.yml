@@ -3,11 +3,11 @@ name: Atedu Frontend CI/CD
 on:
   push:
     branches:
-      - [ master ]
+      - master
   pull_request:
     types: [opened, synchronize, reopened, closed]
     brances:
-      - [ master ]
+      - master
 
 jobs:
   build_and_deploy_job:
