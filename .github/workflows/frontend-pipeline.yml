@@ -44,8 +44,6 @@ jobs:
       # Download previusly shared build
       - name: Get artifact
         uses: actions/download-artifact@v1
-        with:
-            name: react-github-actions-build
 
       #Login to Azure
       - name: Azure Login
@@ -59,15 +57,15 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob upload-batch --account-name devatedu -d '$web' -s ./
+            az storage blob upload-batch --account-name devatedu -d '$web' -s .
 
-      #Purge CND
-      - name: Azure CLI Script
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.0.72
-          inlineScript: |
-            az cdn endpoint purge --content-path "/*" --profile-name devatedu --name devatedu --resource-group atedu-dev
+      # #Purge CND
+      # - name: Azure CLI Script
+      #   uses: azure/CLI@v1
+      #   with:
+      #     azcliversion: 2.0.72
+      #     inlineScript: |
+      #       az cdn endpoint purge --content-path "/*" --profile-name devatedu --name devatedu --resource-group atedu-dev
 
       #Azure Logout
       - name: Logout
