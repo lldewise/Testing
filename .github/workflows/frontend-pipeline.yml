@@ -43,7 +43,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob delete-batch --source $web --account-name devatedu 
+            az storage blob delete-batch --account-name devatedu --source $web
       #Upload Files
       - name: Azure CLI Script
         uses: azure/CLI@v1
