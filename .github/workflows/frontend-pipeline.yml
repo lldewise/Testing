@@ -59,7 +59,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob upload-batch --account-name devatedu -d '$web' -s .
+            az storage blob upload-batch --account-name devatedu -d '$web' -s ./
 
       #Purge CND
       - name: Azure CLI Script
