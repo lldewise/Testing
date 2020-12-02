@@ -47,11 +47,20 @@ jobs:
         with:
             name: react-github-actions-build
 
-      #Login to Azure
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      # #Login to Azure
+      # - name: Azure Login
+      #   uses: azure/login@v1
+      #   with:
+      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - uses: Azure/get-keyvault-secrets@v1.0
+      with:
+        keyvault: "key-weu-d-frontend"
+        secrets: "key-weu-d-frontend"           # Master key to open all doors in the building
+      id: keyvaultaction
+    - uses: azure/login@v1
+      with:
+        creds: ${{ steps.keyvaultaction.outputs.key-weu-d-frontend }}
 
       #Upload Files
       - name: Azure CLI Script
@@ -59,15 +68,7 @@ jobs:
         with:
           azcliversion: 2.0.72
           inlineScript: |
-            az storage blob upload-batch --account-name devatedu -d '$web' -s ./react-github-actions-build
-
-      # #Purge CND
-      # - name: Azure CLI Script
-      #   uses: azure/CLI@v1
-      #   with:
-      #     azcliversion: 2.0.72
-      #     inlineScript: |
-      #       az cdn endpoint purge --content-path "/*" --profile-name devatedu --name devatedu --resource-group atedu-dev
+            az storage blob upload-batch --account-name stweudfrontend -d '$web' -s ./react-github-actions-build
 
       #Azure Logout
       - name: Logout
