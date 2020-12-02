@@ -53,14 +53,15 @@ jobs:
       #   with:
       #     creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - uses: Azure/get-keyvault-secrets@v1.0
-      with:
+      - name: Azure KeyVault
+       uses: Azure/get-keyvault-secrets@v1.0
+       with:
         keyvault: "key-weu-d-frontend"
         secrets: "key-weu-d-frontend"           # Master key to open all doors in the building
-      id: keyvaultaction
-    - uses: azure/login@v1
-      with:
-        creds: ${{ steps.keyvaultaction.outputs.key-weu-d-frontend }}
+       id: keyvaultaction
+       uses: azure/login@v1
+        with:
+          creds: ${{ steps.keyvaultaction.outputs.key-weu-d-frontend }}
 
       #Upload Files
       - name: Azure CLI Script
